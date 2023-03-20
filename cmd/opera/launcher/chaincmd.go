@@ -1,7 +1,7 @@
 package launcher
 
 import (
-	"github.com/ethereum/go-ethereum/cmd/utils"
+	"github.com/Fantom-foundation/go-ethereum/cmd/utils"
 	"gopkg.in/urfave/cli.v1"
 )
 

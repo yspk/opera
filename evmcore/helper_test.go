@@ -19,9 +19,9 @@ package evmcore
 import (
 	"container/list"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/ethdb"
-	notify "github.com/ethereum/go-ethereum/event"
+	"github.com/Fantom-foundation/go-ethereum/core/rawdb"
+	"github.com/Fantom-foundation/go-ethereum/ethdb"
+	notify "github.com/Fantom-foundation/go-ethereum/event"
 )
 
 // Implement our EthTest Manager

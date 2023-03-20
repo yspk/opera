@@ -2,15 +2,15 @@ package gossip
 
 // Simple ballot contract
 //go:generate bash -c "docker run --rm -v $(pwd)/contract/ballot:/src -v $(pwd)/contract:/dst ethereum/solc:0.5.12 -o /dst/solc/ --optimize --optimize-runs=2000 --bin --abi --allow-paths /src --overwrite /src/Ballot.sol"
-//go:generate go run github.com/ethereum/go-ethereum/cmd/abigen --bin=contract/solc/Ballot.bin --abi=contract/solc/Ballot.abi --pkg=ballot --type=Contract --out=contract/ballot/contract.go
+//go:generate go run github.com/Fantom-foundation/go-ethereum/cmd/abigen --bin=contract/solc/Ballot.bin --abi=contract/solc/Ballot.abi --pkg=ballot --type=Contract --out=contract/ballot/contract.go
 
 import (
 	"math/big"
 	"math/rand"
 	"testing"
 
+	"github.com/Fantom-foundation/go-ethereum/core/types"
 	"github.com/Fantom-foundation/lachesis-base/hash"
-	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/stretchr/testify/require"
 
 	"github.com/Fantom-foundation/go-opera/gossip/contract/ballot"

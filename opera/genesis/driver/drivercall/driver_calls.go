@@ -4,9 +4,9 @@ import (
 	"math/big"
 	"strings"
 
+	"github.com/Fantom-foundation/go-ethereum/accounts/abi"
+	"github.com/Fantom-foundation/go-ethereum/common"
 	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
 
 	"github.com/Fantom-foundation/go-opera/inter"
 	"github.com/Fantom-foundation/go-opera/opera"

@@ -3,7 +3,7 @@ package topicsdb
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Fantom-foundation/go-ethereum/common"
 )
 
 func (tt *Index) searchLazy(ctx context.Context, pattern [][]common.Hash, blockStart []byte, onMatched func(*logrec) (bool, error)) (err error) {

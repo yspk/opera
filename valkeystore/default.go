@@ -1,7 +1,7 @@
 package valkeystore
 
 import (
-	"github.com/ethereum/go-ethereum/accounts/keystore"
+	"github.com/Fantom-foundation/go-ethereum/accounts/keystore"
 
 	"github.com/Fantom-foundation/go-opera/valkeystore/encryption"
 )

@@ -1,7 +1,7 @@
 package validatorpk
 
 import (
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Fantom-foundation/go-ethereum/common"
 	"github.com/pkg/errors"
 )
 

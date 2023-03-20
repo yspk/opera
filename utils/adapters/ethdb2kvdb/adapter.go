@@ -1,8 +1,8 @@
 package ethdb2kvdb
 
 import (
+	"github.com/Fantom-foundation/go-ethereum/ethdb"
 	"github.com/Fantom-foundation/lachesis-base/kvdb"
-	"github.com/ethereum/go-ethereum/ethdb"
 )
 
 type Adapter struct {

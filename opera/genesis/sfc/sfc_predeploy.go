@@ -1,8 +1,8 @@
 package sfc
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/Fantom-foundation/go-ethereum/common"
+	"github.com/Fantom-foundation/go-ethereum/common/hexutil"
 )
 
 // GetContractBin is SFC contract genesis implementation bin code

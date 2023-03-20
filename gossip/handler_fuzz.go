@@ -1,4 +1,5 @@
-//+build gofuzz
+//go:build gofuzz
+// +build gofuzz
 
 package gossip
 
@@ -6,9 +7,9 @@ import (
 	"bytes"
 	"sync"
 
+	"github.com/Fantom-foundation/go-ethereum/p2p"
+	"github.com/Fantom-foundation/go-ethereum/p2p/enode"
 	_ "github.com/dvyukov/go-fuzz/go-fuzz-defs"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
 
 	"github.com/Fantom-foundation/go-opera/evmcore"
 	"github.com/Fantom-foundation/go-opera/integration/makegenesis"

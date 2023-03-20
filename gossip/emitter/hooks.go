@@ -3,10 +3,10 @@ package emitter
 import (
 	"time"
 
+	"github.com/Fantom-foundation/go-ethereum/core/types"
 	"github.com/Fantom-foundation/lachesis-base/emitter/ancestor"
 	"github.com/Fantom-foundation/lachesis-base/inter/idx"
 	"github.com/Fantom-foundation/lachesis-base/inter/pos"
-	"github.com/ethereum/go-ethereum/core/types"
 
 	"github.com/Fantom-foundation/go-opera/inter"
 	"github.com/Fantom-foundation/go-opera/utils/adapters/vecmt2dagidx"

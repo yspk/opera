@@ -5,9 +5,9 @@ package evmstore
 */
 
 import (
+	"github.com/Fantom-foundation/go-ethereum/common"
 	"github.com/Fantom-foundation/lachesis-base/hash"
 	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/ethereum/go-ethereum/common"
 )
 
 type TxPosition struct {

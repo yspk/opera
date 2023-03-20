@@ -3,8 +3,8 @@ package ethapi
 import (
 	"context"
 
+	"github.com/Fantom-foundation/go-ethereum/common/hexutil"
 	"github.com/Fantom-foundation/lachesis-base/inter/idx"
-	"github.com/ethereum/go-ethereum/common/hexutil"
 )
 
 // PublicAbftAPI provides an API to access consensus related information.

@@ -3,7 +3,7 @@ package utils
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Fantom-foundation/go-ethereum/common"
 )
 
 // BigTo256 converts big number to 32 bytes array

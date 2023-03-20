@@ -6,7 +6,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
+	"github.com/Fantom-foundation/go-ethereum/cmd/utils"
 )
 
 // Check if errlock is written

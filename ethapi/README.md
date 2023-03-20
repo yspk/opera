@@ -1,1 +1,1 @@
-Package is a full copy of github.com/ethereum/go-ethereum/internal/ethapi
+Package is a full copy of github.com/Fantom-foundation/go-ethereum/internal/ethapi

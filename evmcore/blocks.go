@@ -17,7 +17,7 @@
 package evmcore
 
 import (
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/Fantom-foundation/go-ethereum/common"
 )
 
 // BadHashes represent a set of manually tracked bad hashes (usually hard forks)

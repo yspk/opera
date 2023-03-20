@@ -5,10 +5,10 @@ import (
 	"math/big"
 	"sync/atomic"
 
+	"github.com/Fantom-foundation/go-ethereum/common"
 	"github.com/Fantom-foundation/lachesis-base/gossip/dagprocessor"
 	"github.com/Fantom-foundation/lachesis-base/hash"
 	"github.com/Fantom-foundation/lachesis-base/inter/dag"
-	"github.com/ethereum/go-ethereum/common"
 
 	"github.com/Fantom-foundation/go-opera/eventcheck"
 	"github.com/Fantom-foundation/go-opera/eventcheck/epochcheck"

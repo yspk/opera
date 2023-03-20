@@ -6,9 +6,9 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Fantom-foundation/go-ethereum/cmd/utils"
+	"github.com/Fantom-foundation/go-ethereum/eth"
+	"github.com/Fantom-foundation/go-ethereum/params"
 	"gopkg.in/urfave/cli.v1"
 )
 

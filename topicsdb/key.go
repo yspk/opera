@@ -1,8 +1,8 @@
 package topicsdb
 
 import (
+	"github.com/Fantom-foundation/go-ethereum/common"
 	"github.com/Fantom-foundation/lachesis-base/common/bigendian"
-	"github.com/ethereum/go-ethereum/common"
 )
 
 const (
