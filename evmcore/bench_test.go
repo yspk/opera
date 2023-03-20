@@ -28,9 +28,9 @@ import (
 	"github.com/Fantom-foundation/go-ethereum/core/rawdb"
 	"github.com/Fantom-foundation/go-ethereum/core/state"
 	"github.com/Fantom-foundation/go-ethereum/core/types"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
 	"github.com/Fantom-foundation/go-ethereum/ethdb"
 	"github.com/Fantom-foundation/go-ethereum/params"
+	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/syndtr/goleveldb/leveldb/opt"
 
 	"github.com/Fantom-foundation/go-opera/integration/makegenesis"

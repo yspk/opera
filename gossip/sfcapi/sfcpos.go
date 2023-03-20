@@ -2,7 +2,7 @@ package sfcapi
 
 import (
 	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/crypto"
 )
 
 // Events
@@ -27,14 +27,14 @@ var (
 		Delegated               common.Hash
 		Undelegated             common.Hash
 	}{
-		ClaimedRewards:          crypto.Keccak256Hash([]byte("ClaimedRewards(address,uint256,uint256,uint256,uint256)")),
-		RestakedRewards:         crypto.Keccak256Hash([]byte("RestakedRewards(address,uint256,uint256,uint256,uint256)")),
-		ClaimedDelegationReward: crypto.Keccak256Hash([]byte("ClaimedDelegationReward(address,uint256,uint256,uint256,uint256)")),
-		ClaimedValidatorReward:  crypto.Keccak256Hash([]byte("ClaimedValidatorReward(uint256,uint256,uint256,uint256)")),
-		CreatedValidator:        crypto.Keccak256Hash([]byte("CreatedValidator(uint256,address,uint256,uint256)")),
-		DeactivatedValidator:    crypto.Keccak256Hash([]byte("DeactivatedValidator(uint256,uint256,uint256)")),
-		ChangedValidatorStatus:  crypto.Keccak256Hash([]byte("ChangedValidatorStatus(uint256,uint256)")),
-		Delegated:               crypto.Keccak256Hash([]byte("Delegated(address,uint256,uint256)")),
-		Undelegated:             crypto.Keccak256Hash([]byte("Undelegated(address,uint256,uint256,uint256)")),
+		ClaimedRewards:          common.BytesToHash(crypto.Keccak256Hash([]byte("ClaimedRewards(address,uint256,uint256,uint256,uint256)")).Bytes()),
+		RestakedRewards:         common.BytesToHash(crypto.Keccak256Hash([]byte("RestakedRewards(address,uint256,uint256,uint256,uint256)")).Bytes()),
+		ClaimedDelegationReward: common.BytesToHash(crypto.Keccak256Hash([]byte("ClaimedDelegationReward(address,uint256,uint256,uint256,uint256)")).Bytes()),
+		ClaimedValidatorReward:  common.BytesToHash(crypto.Keccak256Hash([]byte("ClaimedValidatorReward(uint256,uint256,uint256,uint256)")).Bytes()),
+		CreatedValidator:        common.BytesToHash(crypto.Keccak256Hash([]byte("CreatedValidator(uint256,address,uint256,uint256)")).Bytes()),
+		DeactivatedValidator:    common.BytesToHash(crypto.Keccak256Hash([]byte("DeactivatedValidator(uint256,uint256,uint256)")).Bytes()),
+		ChangedValidatorStatus:  common.BytesToHash(crypto.Keccak256Hash([]byte("ChangedValidatorStatus(uint256,uint256)")).Bytes()),
+		Delegated:               common.BytesToHash(crypto.Keccak256Hash([]byte("Delegated(address,uint256,uint256)")).Bytes()),
+		Undelegated:             common.BytesToHash(crypto.Keccak256Hash([]byte("Undelegated(address,uint256,uint256,uint256)")).Bytes()),
 	}
 )

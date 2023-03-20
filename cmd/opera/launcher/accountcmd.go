@@ -29,8 +29,8 @@ import (
 	"github.com/Fantom-foundation/go-ethereum/cmd/utils"
 	"github.com/Fantom-foundation/go-ethereum/common"
 	"github.com/Fantom-foundation/go-ethereum/console/prompt"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
 	"github.com/Fantom-foundation/go-ethereum/log"
+	"github.com/ethereum/go-ethereum/crypto"
 	"gopkg.in/urfave/cli.v1"
 )
 

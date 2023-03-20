@@ -8,9 +8,9 @@ import (
 
 	"github.com/Fantom-foundation/go-ethereum/common"
 	"github.com/Fantom-foundation/go-ethereum/core/types"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
 	"github.com/Fantom-foundation/lachesis-base/hash"
 	"github.com/Fantom-foundation/lachesis-base/inter/idx"
+	"github.com/ethereum/go-ethereum/crypto"
 
 	"github.com/Fantom-foundation/go-opera/inter"
 	"github.com/Fantom-foundation/go-opera/inter/validatorpk"
@@ -127,7 +127,7 @@ func GetFakeValidators(num int) gpos.Validators {
 
 	for i := 1; i <= num; i++ {
 		key := FakeKey(i)
-		addr := crypto.PubkeyToAddress(key.PublicKey)
+		addr := common.BytesToAddress(crypto.PubkeyToAddress(key.PublicKey).Bytes())
 		pubkeyraw := crypto.FromECDSAPub(&key.PublicKey)
 		validatorID := idx.ValidatorID(i)
 		validators = append(validators, gpos.Validator{

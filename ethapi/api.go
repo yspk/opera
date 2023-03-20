@@ -21,6 +21,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	gcommon "github.com/ethereum/go-ethereum/common"
 	"math/big"
 	"strings"
 	"time"
@@ -35,7 +36,6 @@ import (
 	"github.com/Fantom-foundation/go-ethereum/consensus/ethash"
 	"github.com/Fantom-foundation/go-ethereum/core/types"
 	"github.com/Fantom-foundation/go-ethereum/core/vm"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
 	"github.com/Fantom-foundation/go-ethereum/log"
 	"github.com/Fantom-foundation/go-ethereum/p2p"
 	"github.com/Fantom-foundation/go-ethereum/params"
@@ -43,6 +43,7 @@ import (
 	"github.com/Fantom-foundation/go-ethereum/rpc"
 	"github.com/Fantom-foundation/lachesis-base/hash"
 	"github.com/davecgh/go-spew/spew"
+	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/tyler-smith/go-bip39"
 
 	"github.com/Fantom-foundation/go-opera/evmcore"
@@ -476,7 +477,7 @@ func (s *PrivateAccountAPI) EcRecover(ctx context.Context, data, sig hexutil.Byt
 	if err != nil {
 		return common.Address{}, err
 	}
-	return crypto.PubkeyToAddress(*rpk), nil
+	return common.BytesToAddress(crypto.PubkeyToAddress(*rpk).Bytes()), nil
 }
 
 // SignAndSendTransaction was renamed to SendTransaction. This method is deprecated
@@ -600,7 +601,7 @@ func (s *PublicBlockChainAPI) GetProof(ctx context.Context, address common.Addre
 		storageHash = storageTrie.Hash()
 	} else {
 		// no storageTrie means the account does not exist, so the codeHash is the hash of an empty bytearray.
-		codeHash = crypto.Keccak256Hash(nil)
+		codeHash = common.BytesToHash(crypto.Keccak256Hash(nil).Bytes())
 	}
 
 	// create the proof for the storageKeys
@@ -1536,7 +1537,7 @@ func (s *PublicTransactionPoolAPI) GetTransactionReceipt(ctx context.Context, ha
 	}
 	// If the ContractAddress is 20 0x0 bytes, assume it is not a contract creation
 	if tx.To() == nil {
-		fields["contractAddress"] = crypto.CreateAddress(from, tx.Nonce())
+		fields["contractAddress"] = crypto.CreateAddress(gcommon.BytesToAddress(from.Bytes()), tx.Nonce())
 	}
 	return fields, nil
 }
@@ -1657,7 +1658,7 @@ func SubmitTransaction(ctx context.Context, b Backend, tx *types.Transaction) (c
 		if err != nil {
 			return common.Hash{}, err
 		}
-		addr := crypto.CreateAddress(from, tx.Nonce())
+		addr := crypto.CreateAddress(gcommon.BytesToAddress(from.Bytes()), tx.Nonce())
 		log.Info("Submitted contract creation", "fullhash", tx.Hash().Hex(), "contract", addr.Hex())
 	} else {
 		log.Info("Submitted transaction", "fullhash", tx.Hash().Hex(), "recipient", tx.To())

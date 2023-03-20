@@ -3,7 +3,7 @@ package valkeystore
 import (
 	"errors"
 
-	"github.com/Fantom-foundation/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/crypto"
 
 	"github.com/Fantom-foundation/go-opera/inter/validatorpk"
 	"github.com/Fantom-foundation/go-opera/valkeystore/encryption"

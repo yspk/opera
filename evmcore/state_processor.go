@@ -21,8 +21,9 @@ import (
 	"github.com/Fantom-foundation/go-ethereum/core/state"
 	"github.com/Fantom-foundation/go-ethereum/core/types"
 	"github.com/Fantom-foundation/go-ethereum/core/vm"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
 	"github.com/Fantom-foundation/go-ethereum/params"
+	gcommon "github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/crypto"
 )
 
 // StateProcessor is a basic Processor, which takes care of transitioning
@@ -143,7 +144,7 @@ func ApplyTransaction(
 	receipt.GasUsed = result.UsedGas
 	// if the transaction created a contract, store the creation address in the receipt.
 	if msg.To() == nil {
-		receipt.ContractAddress = crypto.CreateAddress(vmenv.Context.Origin, tx.Nonce())
+		receipt.ContractAddress = common.BytesToAddress(crypto.CreateAddress(gcommon.BytesToAddress(vmenv.Context.Origin.Bytes()), tx.Nonce()).Bytes())
 	}
 	// Set the receipt logs
 	receipt.Logs = logs

@@ -2,7 +2,7 @@ package driverpos
 
 import (
 	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/crypto"
 )
 
 // Events
@@ -15,10 +15,10 @@ var (
 		UpdateNetworkVersion  common.Hash
 		AdvanceEpochs         common.Hash
 	}{
-		UpdateValidatorWeight: crypto.Keccak256Hash([]byte("UpdateValidatorWeight(uint256,uint256)")),
-		UpdateValidatorPubkey: crypto.Keccak256Hash([]byte("UpdateValidatorPubkey(uint256,bytes)")),
-		UpdateNetworkRules:    crypto.Keccak256Hash([]byte("UpdateNetworkRules(bytes)")),
-		UpdateNetworkVersion:  crypto.Keccak256Hash([]byte("UpdateNetworkVersion(uint256)")),
-		AdvanceEpochs:         crypto.Keccak256Hash([]byte("AdvanceEpochs(uint256)")),
+		UpdateValidatorWeight: common.BytesToHash(crypto.Keccak256Hash([]byte("UpdateValidatorWeight(uint256,uint256)")).Bytes()),
+		UpdateValidatorPubkey: common.BytesToHash(crypto.Keccak256Hash([]byte("UpdateValidatorPubkey(uint256,bytes)")).Bytes()),
+		UpdateNetworkRules:    common.BytesToHash(crypto.Keccak256Hash([]byte("UpdateNetworkRules(bytes)")).Bytes()),
+		UpdateNetworkVersion:  common.BytesToHash(crypto.Keccak256Hash([]byte("UpdateNetworkVersion(uint256)")).Bytes()),
+		AdvanceEpochs:         common.BytesToHash(crypto.Keccak256Hash([]byte("AdvanceEpochs(uint256)")).Bytes()),
 	}
 )

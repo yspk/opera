@@ -31,9 +31,9 @@ import (
 	"github.com/Fantom-foundation/go-ethereum/core/rawdb"
 	"github.com/Fantom-foundation/go-ethereum/core/state"
 	"github.com/Fantom-foundation/go-ethereum/core/types"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
 	notify "github.com/Fantom-foundation/go-ethereum/event"
 	"github.com/Fantom-foundation/go-ethereum/params"
+	"github.com/ethereum/go-ethereum/crypto"
 )
 
 // testTxPoolConfig is a transaction pool configuration without stateful disk

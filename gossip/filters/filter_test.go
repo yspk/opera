@@ -28,9 +28,9 @@ import (
 	"github.com/Fantom-foundation/go-ethereum/core"
 	"github.com/Fantom-foundation/go-ethereum/core/rawdb"
 	"github.com/Fantom-foundation/go-ethereum/core/types"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
 	"github.com/Fantom-foundation/go-ethereum/params"
 	"github.com/Fantom-foundation/lachesis-base/kvdb/table"
+	"github.com/ethereum/go-ethereum/crypto"
 
 	"github.com/Fantom-foundation/go-opera/topicsdb"
 	"github.com/Fantom-foundation/go-opera/utils/adapters/ethdb2kvdb"

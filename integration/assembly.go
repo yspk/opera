@@ -4,17 +4,18 @@ import (
 	"crypto/ecdsa"
 	"errors"
 	"fmt"
+	"github.com/Fantom-foundation/go-ethereum/common"
 
 	"github.com/Fantom-foundation/go-ethereum/accounts"
 	"github.com/Fantom-foundation/go-ethereum/accounts/keystore"
 	"github.com/Fantom-foundation/go-ethereum/cmd/utils"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
 	"github.com/Fantom-foundation/go-ethereum/log"
 	"github.com/Fantom-foundation/lachesis-base/abft"
 	"github.com/Fantom-foundation/lachesis-base/hash"
 	"github.com/Fantom-foundation/lachesis-base/inter/idx"
 	"github.com/Fantom-foundation/lachesis-base/kvdb"
 	"github.com/Fantom-foundation/lachesis-base/kvdb/flushable"
+	"github.com/ethereum/go-ethereum/crypto"
 
 	"github.com/Fantom-foundation/go-opera/gossip"
 	"github.com/Fantom-foundation/go-opera/opera"
@@ -241,7 +242,7 @@ func SetAccountKey(
 	ks := kss[0].(*keystore.KeyStore)
 
 	acc = accounts.Account{
-		Address: crypto.PubkeyToAddress(key.PublicKey),
+		Address: common.BytesToAddress(crypto.PubkeyToAddress(key.PublicKey).Bytes()),
 	}
 
 	imported, err := ks.ImportECDSA(key, pswd)

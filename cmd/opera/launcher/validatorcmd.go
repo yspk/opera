@@ -9,7 +9,7 @@ import (
 
 	"github.com/Fantom-foundation/go-ethereum/cmd/utils"
 	"github.com/Fantom-foundation/go-ethereum/common"
-	"github.com/Fantom-foundation/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/crypto"
 	"gopkg.in/urfave/cli.v1"
 
 	"github.com/Fantom-foundation/go-opera/inter/validatorpk"
